@@ -10,7 +10,7 @@ app.use((0, cors_1.default)());
 app.get('/', (_, res) => {
     res.send('Hello World');
 });
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('Listening on Port 5000');
 });
 //# sourceMappingURL=index.js.map
