@@ -1,14 +1,19 @@
 import express, {Request, Response} from 'express';
 import cors from 'cors'
 
+const PORT = 5000 || process.env.PORT
+
 const app = express()
 
 app.use(cors())
 
 app.get('/', (_: Request, res: Response) => {
-    res.send('Hello World')
+    res.json({
+        user: 1,
+        password: 'password'
+    })
 })
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log('Listening on Port 5000')
-}) 
+app.listen(PORT, () => {
+    console.log(`Listening on Port ${PORT}`)
+})
