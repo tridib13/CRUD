@@ -10,6 +10,5 @@ export default async function Home() {
 
 const getData = async () => {
   const data = await fetch('http:localhost:5000/', {cache: 'force-cache'})
-
   return data.json()
 }
